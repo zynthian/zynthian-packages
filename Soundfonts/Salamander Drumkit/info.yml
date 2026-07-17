@@ -5,7 +5,7 @@ author: "Alexander Holm"
 license: "CC BY-SA"
 source_url: "https://github.com/endolith/Salamander-Drumkit"
 size: "358MB"
-content: "soundfonts (sfz)"
+content: "sfz/Drums/Salamander Drumkit"
 description: "A drum sample library I recorded in the garage! It’s meant to have an acoustic sound/feel to it. It turned out pretty well.
 
 It doesn't have many velocity layers, but instead many samples per velocity, in an attempt to get a more authentic sound when programming. The closed-hat has no less than 20 samples per velocity... only two velocity layers tho, so that makes 40 in total. I've actually built the drumkit myself (in 2009). It's built out of birch staves and has very thick shells (couldn't lathe the insides) It also features an unusual one of a kind ropetuning system, the 12\" tomtom is a prototype of another kind tho tuning system.

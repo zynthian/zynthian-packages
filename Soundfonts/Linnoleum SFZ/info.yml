@@ -5,7 +5,7 @@ author: "Nathan Ingelbrecht"
 license: "CC BY-SA"
 source_url: "https://musical-artifacts.com/artifacts/6356"
 size: "126MB"
-content: "soundfonts (sfz)"
+content: "sfz/Drum Machines/Linnoleum"
 description: "Linn LM-1 SFZ based on samples provided by the nice people at Samples From Mars, made available for their article involving the comparison of 2 LM-1 revisions. One is black and one is grey. I tried to make a software equivalent of the LM-1 with the available samples. This means the controls are limited to volume, pan, tune and decay. This does not mean a limitation on the quantity of knobs to twist.
 
 Quote from the article: 'The orange LM1 (Rev.3) has a harder, punchier and faster sound (almost like a 707), while the mysterious, gray unit (Rev.2) is warmer and lazier. Something about the bass drum filters sound completely different between the two, and the cabasa is either a different sample entirely, has more distortion, pre-attack, or all of the above. The orange unit also has a modded snare sample with less pre-attack, so that it arrives a bit earlier when sequenced. All of these differences give each machine their own distinct sound, feel and pocket.'"

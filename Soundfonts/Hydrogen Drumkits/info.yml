@@ -4,8 +4,8 @@ icon: "Art/hydrogen_logo.png"
 author: "Various"
 license: "Various (GPLv3, CC0, CC-BY-SA)"
 source_url: "https://musical-artifacts.com/artifacts/133"
-size: "145MB"
-content: "soundfonts (hydrogen2, LV2 presets)"
+size: "195MB"
+content: "soundfonts (hydrogen2), LV2 presets"
 restart_ui: True
 description: "A collection of hydriogen2 drumkits that you can use in zynthian with Fabla and DrMr sampler. Most of included kits are drum-machines from 80s & 90s, but it also includes the ethnic percussion kit 'CircAfrique v4' and others.
 
