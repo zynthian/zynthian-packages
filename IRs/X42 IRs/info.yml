@@ -1,0 +1,10 @@
+
+title: "X42 IRs"
+icon: "Art/x42-zconvolver.png"
+author: "Various"
+license: "Various"
+source_url: "https://x42-plugins.com/x42/x42-zconvolver"
+size: "246MB"
+content: "IRs (flac, LV2 presets)"
+restart_ui: True
+description: "A collection of Impulse Response (IRs) files and the corresponding LV2 presets for the excellent X42's IR convolver plugin. Sourced from ccgb, jezwells, l480, openairlib, samplicity-m7 and teufelsberg."

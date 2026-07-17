@@ -1,0 +1,10 @@
+
+title: "Conner's IR Library"
+icon: "Art/Conners.png"
+author: "Conners"
+license: "MIT"
+source_url: "https://github.com/itsmusician/IR-Library"
+size: "650MB"
+content: "IRs (wav)"
+restart_ui: False
+description: "A collection of impulse response files that you can load with the X42's IR convolver plugins and others. It's a huge collection of well organized, mostly experimental IRs. It will surprise you."

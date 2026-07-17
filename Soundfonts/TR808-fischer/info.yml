@@ -1,0 +1,17 @@
+title: "TR808 Fischer"
+icon: "Art/tr808.jpg"
+author: "Michael Fischer (samples) & Jeff Learman (SFZ)"
+license: "CC0"
+source_url: "https://github.com/zynthian/TR808-fischer"
+size: "12MB"
+content: "soundfonts (sfz)"
+description: "Sample-based Roland TR-808 drum machine emulation with all the sound controllers from the original device plus individual pan control for each sound. It uses the Fischer's sampleset, composed of 116 high quality samples recorded directly from the original device at different control positions.
+
+<b>TR808.sfz</b>
+
+The original sound without blend. Only 5 control positions for the controllers, but you get the purest TR808 sound.
+
+<b>TR808_xfades.sfz</b>
+
+It blends 2 samples to simulate intermediate controller values. Not the purest sound, but increased control possibilities.
+"

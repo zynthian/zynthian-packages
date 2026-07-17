@@ -1,0 +1,13 @@
+
+title: "Sonatina Symphonic Orchestra (SSO4)"
+icon: "Art/sonatinasymphonicorchestra.jpg"
+author: "Mattias Westlund, Peter Eastman"
+license: "CC SAMPLING+"
+source_url: "https://github.com/peastman/sso"
+size: "1.4GB"
+content: "soundfonts (sfz)"
+description: "Sonatina Symphonic Orchestra (SSO) is a free library of sampled orchestral instruments. The original version was created by Mattias Westlund in 2011, and quickly earned a following for its excellent quality and wide selection of instruments.
+
+All samples are stereo, 16 bit, 44.1 kHz. Most instruments are sampled in minor 3rds. Most short articulations use at least 2x round robin.
+
+Most samples have only a small amount of reverb baked into them, so adding a realistic reverb is important for producing a good overall sound. Given that the samples came from a variety of different sources, this is also important for making them sound like a unified orchestra."

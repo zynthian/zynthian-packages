@@ -1,0 +1,17 @@
+
+title: "Virtual Playing Orchestra (VPO3)"
+icon: "Art/banner-vpo.jpg"
+author: "various"
+license: "CC (CC0, CC-BY-SA, etc.)"
+source_url: "https://virtualplaying.com/virtual-playing-orchestra/"
+size: "555MB"
+content: "soundfonts (sfz)"
+description: "Virtual Playing Orchestra v3 is a free orchestral sample library, in sfz format, that was created to emulate multiple articulations of the solo and section instruments from a full orchestra using the best free samples from Sonatina Symphonic Orchestra, No Budget Orchestra, VSCO2 Community Edition, University of Iowa, Philharmonia Orchestra and extra free samples from Mattias Westlund, author of Sonatina Symphonic Orchestra. It offers an extensive selection of section and solo instruments for woodwinds, brass, strings, and percussion.
+
+The package contains 2 sets of instruments:
+
++ The Standard Orchestra uses key velocity (how fast you hit a key on your MIDI controller) to control the volume. Articulations (sustain, staccato etc) are placed in different tracks or are selected via key switches. Most virtual instruments work this way.
+
++ The Performance Orchestra uses the MOD wheel to control volume (some professional sample libraries work this way). Key velocity (how fast you hit a key on your MIDI controller) selects the articulation (sustain, staccato etc) while still slightly affecting the volume. The performance .sfz file names contain the string '-PERF'."
+
+

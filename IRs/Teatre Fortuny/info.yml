@@ -1,0 +1,19 @@
+
+title: "Teatre Fortuny"
+icon: "Art/fortuny_square.jpg"
+author: "Zylvio & Jofemodo"
+license: "CC0"
+content: "IRs (wav)"
+source_url: "https://blog.zynthian.org/2026/05/capturing-the-space/"
+description: "A collection of IRs captured and processed with zynthian in the 'Teatre Fortuny' at Reus (Spain). Not a really serious work with surprisingly good results.
+
+We recorded in three positions along the central corridor of the theatre, four different recordings for each position:
+
++ A sine sweep played through the theatre’s PA, recorded in stereo with small condenser mics.<br>
++ The same sweep recorded in mono with an AKG 414 XLS in omni position.<br>
++ A hand-clap recorded in stereo with small condenser mics.<br>
++ A hand-clap recorded in mono with an AKG 414 XLS in omni position.<br>
+
+Yes, the PA was used as the emitter. Yes, it colors the sound. No, we weren’t trying to be purists. This was more about exploration (and fun) than laboratory conditions.
+
+The entire session was recorded through a humble Scarlett 2i2. The post-processing (deconvolution) of the sine-sweep recordings was made with zynthian. The clap recordings were trimmed and adjusted in a PC with Audacity."

@@ -1,0 +1,14 @@
+
+title: "Hydrogen Drumkits"
+icon: "Art/hydrogen_logo.png"
+author: "Various"
+license: "Various (GPLv3, CC0, CC-BY-SA)"
+source_url: "https://musical-artifacts.com/artifacts/133"
+size: "145MB"
+content: "soundfonts (hydrogen2, LV2 presets)"
+restart_ui: True
+description: "A collection of hydriogen2 drumkits that you can use in zynthian with Fabla and DrMr sampler. Most of included kits are drum-machines from 80s & 90s, but it also includes the ethnic percussion kit 'CircAfrique v4' and others.
+
+Note that many of the original kits don't mute their open hi-hat sounds when the hi-hat closed sound is triggered. The hi-hat group settings have been adjusted for most of this collection to mute the open hat when the closed hat is triggered.
+
+The collection has been compiled from the hydrogen kits installable with KXStudio and additional kits provided by Slackermedia and other sources. "

@@ -1,0 +1,11 @@
+
+title: "MelloSFZotron"
+icon: "Art/mellotron_sfizz.jpeg"
+author: "Nathan Ingelbrecht"
+license: "CC0"
+source_url: "https://musical-artifacts.com/artifacts/5947"
+size: "544MB"
+content: "soundfonts (sfz)"
+description: "Mellotron SFZ based on the lovely Leisureland samples. This is an effort to make a software equivalent of a Mellotron. All the controls like on a real Mellotron are available. You get a tune knob that can go +1 octave and -1 octave. There's also a tone knob which you will need because fully clockwise the sounds are pretty harsh. I've also added an attack and release knob which where not on the Mellotron but are a nice extra.
+
+As a final touch there is aftertouch response. When used it adds +6dB gain and slows the pitch down by 30 cents. After reading about Mellotrons on the web it appeared that the M400 sometimes had a felt strip underneath the keys, which enabled the player to press the tape-head a little harder against the tape. I assume this made the sounds louder but also slowed down the tape a little bit because of drag. This is the effect I tried to recreate. If someone has a real Mellotron, feel free to comment."

@@ -1,0 +1,30 @@
+
+title: "Salamander Drumkit"
+icon: "Art/salamander-drumkit.jpg"
+author: "Alexander Holm"
+license: "CC BY-SA"
+source_url: "https://github.com/endolith/Salamander-Drumkit"
+size: "358MB"
+content: "soundfonts (sfz)"
+description: "A drum sample library I recorded in the garage! It’s meant to have an acoustic sound/feel to it. It turned out pretty well.
+
+It doesn't have many velocity layers, but instead many samples per velocity, in an attempt to get a more authentic sound when programming. The closed-hat has no less than 20 samples per velocity... only two velocity layers tho, so that makes 40 in total. I've actually built the drumkit myself (in 2009). It's built out of birch staves and has very thick shells (couldn't lathe the insides) It also features an unusual one of a kind ropetuning system, the 12\" tomtom is a prototype of another kind tho tuning system.
+
+<b>Drums:</b><br>
++ 12x7\" racktom, Aquarian modern vintage (not the one in the picture...)<br/>
++ 14x14\" floortom, Remo emperor or evans g2 can't remember for shure.<br/>
++ 18x18\" kick, Remo pinstripe, Coated Ambassador on the resonant side.<br/>
++ 14x5\" snare birchstaves with thin mahogany stripes, Evans power center reverse dot, Coated.<br/>
++ 14x6\" snare2 birch and mahogany staves, Evans genera dry Coated, with most of the muffling ring ripped off.<br/>
+
+<b>Cymbals:</b><br>
++ Paiste 18\" Innovations china (china2)<br/>
++ Paiste 18\" Innovations medium crash (crash1)<br/>
++ Paiste 20\" Rude thin crash (crash2)<br/>
++ Paiste 20\" pst5 medium ride (ride1)<br/>
++ Paiste 8\" pst5 splash<br/>
++ Paiste 6\" accent<br/>
++ Stagg 20\" SH medium ride (ride 1)<br/>
++ Stagg 14\" SH hihat<br/>
++ Stagg 16\" SH crash (crash3)<br/>
++ Masterworks 20\" Custom china (china1)<br/>"

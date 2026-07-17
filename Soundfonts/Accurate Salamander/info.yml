@@ -1,0 +1,12 @@
+
+title: "Accurate Salamander Grand Piano"
+icon: "Art/accurate_salamander.png"
+#icon: "Art/sshot_accurate60_vs_salamander3_01.gif"
+author: "Chisato Yamauchi; Samples from Alexander Holm"
+license: "CC-BY"
+source_url: "https://www.ir.isas.jaxa.jp/~cyamauch/AccurateSalamander/"
+size: "1.3GB"
+content: "soundfonts (sfz)"
+description: "The Accurate Salamander Project has remastered existing sample sets to produce new Grand Piano soundbanks (SFZ) of instrument maker-level quality. It uses a physics-based approach,  thoroughly pursuing the 'homogeneity' and 'continuity' of volume, overtone, envelope, and delay, which are directly related to ease of control and important for performers who handle delicate expressions.
+
+The Salamander Grand Piano (the widely used SFZ soundbank) with its high recording quality was used as the original source set, and all 480 sampled data in it were carefully re-mastered. We spend a great deal of time setting up and adjusting the processing system in order to achieve perfect quality (at the limit level of specifications). In addition to minimal filtering to preserve the original tone, spot noise that may have been caused by the recording was removed, vibratory noise from sources other than the hammers and strings was eliminated, and extensive restoration was performed to adjust the tone caused by the condition of the piano used for sampling (deteriorated hammers, lack of tuning, etc.) and to correct fatal problems. "
