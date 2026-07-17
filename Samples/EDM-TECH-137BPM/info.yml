@@ -1,0 +1,15 @@
+title: "EDM-TECH-137BPM"
+icon: "Art/waivops_logo.png"
+author: "Various"
+license: "CC BY"
+source_url: "https://www.patchbanks.com/waivops/"
+size: "405M"
+content: "Samples/Loops"
+description: "Over 1000 techno loops at the specified BPM, featuring drum machine and percussive drum synths, complemented by additional synthesizers and chords. Each BPM set is different!
+
+EDM-TECH is an open-source corpus of drum recordings produced in the techno genre, consisting of 11,270 WAV files paired with JSON metadata for supervised model training. The dataset was generated using custom scripting applied to a proprietary database of MIDI patterns and one-shot drum samples. Recordings primarily feature drum machine and percussive drum synths, complemented by additional samples of synthesizers and chords. Data augmentation included random sample-swapping, track isolation, pitch-shifting, equalization, and convolution reverb modeling. These strategies enhance model generalization by exposing training examples to diverse rhythms, sonic qualities, and ambient effects. Training examples were randomly mixed with varying signal levels and audio qualities, providing examples that reflect the evolving styles of techno music over the decades.
+
+WaivOps is a crowd-sourced music creator project focused on providing newly sourced music datasets for developing generative AI models. Unlike commonly sourced audio and MIDI training data, these datasets are specifically developed to enhance model performance by augmenting and generalizing musical notations. Each dataset is developed with model objectives in mind, offering developers and AI music enthusiasts access to large-scale data for various tasks involved in pretraining and fine-tuning models.
+
+The datasets are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). For more detailed information, please visit the links provided to GitHub or Zenodo.
+"
