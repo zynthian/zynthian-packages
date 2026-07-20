@@ -1,0 +1,51 @@
+sf2/FM Modulator.sf2
+sf2/FM Piano.sf2
+sf2/Full Grands.sf2
+sf2/Funky Guitars.sf2
+sf2/Giga Piano.sf2
+sf2/Guitars Universal 1.4.sf2
+sf2/Heavy Guitars.sf2
+sf2/Hip Hop Combo.sf2
+sf2/JAzz BAzz.sf2
+sf2/Jazz Guitars.sf2
+sf2/jRhodes4.sf2
+sf2/Juno FilterBass .sf2
+sf2/Kawai Upright Piano.sf2
+sf2/ModSynth_R1.sf2
+sf2/ModSynth_R1.yml
+sf2/Moogbazz.sf2
+sf2/Naturally Decaying B-Guitars.sf2
+sf2/Nylon Guitar.sf2
+sf2/Oberheim OB-3.sf2
+sf2/Perfect Sine.sf2
+sf2/Pipe Organ.sf2
+sf2/Prophet Killer.sf2
+sf2/Roland Novation Bass.sf2
+sf2/Squierbass.sf2
+sf2/Stratocaster.sf2
+sf2/Super Saw 1.sf2
+sf2/Super Saw 2.sf2
+sf2/Super Saw 3.sf2
+sf2/Synth Samples.sf2
+sf2/Valve OD Guitar.sf2
+sf2/VintageDreamsWaves-v2.sf2
+sf2/ACBass.sf2
+sf2/Acid SQ Neutral.sf2
+sf2/Acoustic Guitars.sf2
+sf2/Analog Saw.sf2
+sf2/Bassguitars.sf2
+sf2/Beeper.sf2
+sf2/Bindo_FingeredBass.sf2
+sf2/BluesBzz.sf2
+sf2/BookerT.sf2
+sf2/BuenosBassSlides.sf2
+sf2/d10 TEK bass.sf2
+sf2/Dance Organs.sf2
+sf2/Dance Trance.sf2
+sf2/Dirty Sub.sf2
+sf2/Djents.sf2
+sf2/Dsix Magic.sf2
+sf2/Dx7 velobass - VS.sf2
+sf2/DX7 Wurlitzer.sf2
+sf2/Expressive Acoustic Guitar.sf2
+sf2/Fazioli Grand.sf2

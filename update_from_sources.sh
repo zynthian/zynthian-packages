@@ -26,6 +26,7 @@ for dir in "$SRCDIR/$catdir"/*; do
                 cp -a "$subdir/Art" "$destdir"
                 cp -a "$subdir/info.yml" "$destdir"
                 cp -a "$subdir"/*.sh "$destdir"
+                cp -a "$subdir"/*.txt "$destdir"
             fi
         fi
     done
@@ -47,6 +48,7 @@ for catdir in "${catdirs[@]}"; do
                 cp -a "$subdir/Art" "$destdir"
                 cp -a "$subdir/info.yml" "$destdir"
                 cp -a "$subdir"/*.sh "$destdir"
+                cp -a "$subdir"/*.txt "$destdir"
             fi
         fi
     done

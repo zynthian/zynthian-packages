@@ -14,7 +14,9 @@ do_install() {
 
 do_uninstall() {
     if [[ $(is_installed) == "installed" ]]; then
-        IFS=$'\n' dir_list=( $(wget -q -O- $URL_DIRLIST) )
+        #IFS=$'\n' dir_list=( $(wget -q -O- $URL_DIRLIST) )
+        SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+        readarray -t dir_list < "$SCRIPT_DIR/dir_list.txt"
         for dir in "${dir_list[@]}"; do
             rm -rf "$DESTINY_DIR/hydrogen/$dir"
         done

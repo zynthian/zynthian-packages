@@ -1,0 +1,283 @@
+sfz/Bass/JazzBass/
+sfz/Bass/SoloBass/
+sfz/Bass/AcousBass/
+sfz/Bass/MellowBass/
+sfz/Bass/Rickenbacker/
+sfz/Bass/SynthBass/
+sfz/Bass/pastabass/
+sfz/Bass/FatSynthBass/
+sfz/Bass/AnalogBass/
+sfz/Bass/FenderBass2/
+sfz/Bass/MoogBass/
+sfz/Bass/Fretless2/
+sfz/Bass/BrightBass/
+sfz/Bass/DeepBass/
+sfz/Bass/FenderPick2/
+sfz/Bass/GretchBass/
+sfz/Bass/Ibanez/
+sfz/Drums/BrushKit/
+sfz/Drums/gmkit/
+sfz/Brass/Tubas/
+sfz/Brass/SoloTuba/
+sfz/Brass/AltoSax/
+sfz/Brass/FrenchHorn/
+sfz/Brass/SoloTrombone/
+sfz/Brass/SoloTrumpet/
+sfz/Brass/SynthBrass/
+sfz/Brass/SaxSect/
+sfz/Brass/TromboneSect/
+sfz/Brass/TrumpetSect/
+sfz/Brass/TenorSax/
+sfz/Brass/TrumpetMute/
+sfz/Pianos/Clavinet/
+sfz/Pianos/dx7_piano/
+sfz/Pianos/harpsichord/
+sfz/Pianos/Wurt/
+sfz/Drum Machines/Roland TR909.sfz
+sfz/Drum Machines/Yamaha RX11.sfz
+sfz/Drum Machines/Lab.sfz
+sfz/Drum Machines/Samples/
+sfz/Drum Machines/Retrobox.sfz
+sfz/Drum Machines/SP1200 2.sfz
+sfz/Drum Machines/LINN9000 2.sfz
+sfz/Drum Machines/Tyson 3.sfz
+sfz/Drum Machines/Tama Tech Star 3.sfz
+sfz/Drum Machines/Tama Tech Star 2.sfz
+sfz/Drum Machines/Boss DR220.sfz
+sfz/Drum Machines/DrumTraks.sfz
+sfz/Drum Machines/Akai XE8.sfz
+sfz/Drum Machines/Tama Tech Star 1.sfz
+sfz/Drum Machines/Korg DDM110.sfz
+sfz/Drum Machines/Drumula 2.sfz
+sfz/Drum Machines/Korg DDD1.sfz
+sfz/Drum Machines/LINN9000 1.sfz
+sfz/Drum Machines/Fricke MSB512.sfz
+sfz/Drum Machines/Kawai R50.sfz
+sfz/Drum Machines/Electro Puff.sfz
+sfz/Drum Machines/E Ave.sfz
+sfz/Drum Machines/Boss DR55.sfz
+sfz/Drum Machines/SP1200 1.sfz
+sfz/Drum Machines/SP 12.sfz
+sfz/Drum Machines/Simmons.sfz
+sfz/Drum Machines/Mattel Synsonic.sfz
+sfz/Drum Machines/MXR 185.sfz
+sfz/Drum Machines/Sween.sfz
+sfz/Drum Machines/Roland TR727.sfz
+sfz/Drum Machines/Roland CR78.sfz
+sfz/Drum Machines/Tyson 1.sfz
+sfz/Drum Machines/Drumula 1.sfz
+sfz/Drum Machines/Roland TR606.sfz
+sfz/Drum Machines/Roland TR808.sfz
+sfz/Drum Machines/SCI Tom.sfz
+sfz/Drum Machines/Tyson 2.sfz
+sfz/Drum Machines/Acetone Rhythm Ace.sfz
+sfz/Drum Machines/DrumFire.sfz
+sfz/Drum Machines/Alesis HR16.sfz
+sfz/Drum Machines/Akai XR10.sfz
+sfz/Ethnic/Tampura.sfz
+sfz/Ethnic/Tabla.sfz
+sfz/Ethnic/Sitar.sfz
+sfz/Ethnic/Bata Drums.sfz
+sfz/Ethnic/Percussion 1.sfz
+sfz/Ethnic/Veena.sfz
+sfz/Ethnic/Samples/
+sfz/Ethnic/Cumbus.sfz
+sfz/Ethnic/Shamisen.sfz
+sfz/Ethnic/Tar.sfz
+sfz/Ethnic/Tamburas.sfz
+sfz/Ethnic/Shakuhachi.sfz
+sfz/Ethnic/Shenai.sfz
+sfz/Ethnic/Temple Gong.sfz
+sfz/Ethnic/Kanun.sfz
+sfz/Ethnic/Pipa.sfz
+sfz/Ethnic/Waterphone.sfz
+sfz/Ethnic/Dulcimer.sfz
+sfz/Ethnic/Ney Flute.sfz
+sfz/Ethnic/Erhu.sfz
+sfz/Ethnic/Dobro.sfz
+sfz/Ethnic/Pan Flute.sfz
+sfz/Ethnic/Percussion 2.sfz
+sfz/Ethnic/Turkish Oud.sfz
+sfz/Ethnic/Shofars.sfz
+sfz/Ethnic/Chinese Percussion.sfz
+sfz/Ethnic/Sarod.sfz
+sfz/Ethnic/Guzhen.sfz
+sfz/Ethnic/Pipa tremolo.sfz
+sfz/Ethnic/Accordian.sfz
+sfz/Ethnic/Luan.sfz
+sfz/Ethnic/Ban-Di.sfz
+sfz/Ethnic/Celtic Harp.sfz
+sfz/Ethnic/Koto.sfz
+sfz/Ethnic/Mizmars.sfz
+sfz/Ethnic/East Indian.sfz
+sfz/Ethnic/Air Gamelan.sfz
+sfz/Guitars/Nylon2/
+sfz/Guitars/SteelGtr/
+sfz/Guitars/StereoLesPaul/
+sfz/Guitars/RealBanjo/
+sfz/Guitars/Mandolin2/
+sfz/Guitars/YamahaGtr/
+sfz/Guitars/Strat2/
+sfz/Guitars/Banjo2/
+sfz/Organs/Calliope/
+sfz/Organs/B3/
+sfz/Organs/Farfisa/
+sfz/Organs/Harmonica/
+sfz/Organs/Melodica/
+sfz/Organs/Accordion/
+sfz/Percussion/Shaker/
+sfz/Percussion/Blocks/
+sfz/Percussion/AVL_Drumkits_Percussion-1.0/
+sfz/Percussion/AfricanDrum/
+sfz/Percussion/SleighBell/
+sfz/Percussion/Cowbell/
+sfz/Percussion/Tabla/
+sfz/Percussion/SteelDrums/
+sfz/Strings/SoloViola/
+sfz/Strings/Mellowtron/
+sfz/Strings/Basses/
+sfz/Strings/Harp/
+sfz/Strings/SoloCello/
+sfz/Strings/SoloViolin/
+sfz/Strings/CelloSect/
+sfz/Strings/WarmPad2/
+sfz/Strings/SynthStrings/
+sfz/Strings/JgViolins/
+sfz/Strings/SCC Expressive Strings/
+sfz/Strings/WarmPad/
+sfz/Strings/SoloViolin2/
+sfz/Synths/Dyno Stack.sfz
+sfz/Synths/Covers.sfz
+sfz/Synths/Dyno.sfz
+sfz/Synths/Atmosphere.sfz
+sfz/Synths/Smoooth.sfz
+sfz/Synths/Fat Synth1.sfz
+sfz/Synths/JP Vox Softs.sfz
+sfz/Synths/SynBite.sfz
+sfz/Synths/Unis Stab.sfz
+sfz/Synths/Big.sfz
+sfz/Synths/Samples/
+sfz/Synths/PlukBell.sfz
+sfz/Synths/Air Softs.sfz
+sfz/Synths/Tinr Punch.sfz
+sfz/Synths/Pwn.sfz
+sfz/Synths/L Synth.sfz
+sfz/Synths/BrethBell.sfz
+sfz/Synths/Square Rez Bass.sfz
+sfz/Synths/PowerSynth2.sfz
+sfz/Synths/Moog 2.sfz
+sfz/Synths/PowerSynth.sfz
+sfz/Synths/Clarinety.sfz
+sfz/Synths/Arp V.sfz
+sfz/Synths/RiseString.sfz
+sfz/Synths/Pipez.sfz
+sfz/Synths/BrethVox.sfz
+sfz/Synths/Espcial.sfz
+sfz/Synths/Slow Heavens.sfz
+sfz/Synths/Syn X Bass.sfz
+sfz/Synths/Marimbell.sfz
+sfz/Synths/Indian Fats.sfz
+sfz/Synths/Rich.sfz
+sfz/Synths/Heaven Choir.sfz
+sfz/Synths/BeatIt.sfz
+sfz/Synths/Pad Synth 1.sfz
+sfz/Synths/Pick.sfz
+sfz/Synths/Jump Bass.sfz
+sfz/Synths/EpicSynth.sfz
+sfz/Synths/MSys.sfz
+sfz/Synths/SynStrings.sfz
+sfz/Synths/Bells Heaven.sfz
+sfz/Synths/FilterSweep.sfz
+sfz/Synths/Synths/
+sfz/Synths/Fat Synth.sfz
+sfz/Synths/Pop Syn Vox.sfz
+sfz/Synths/Acoustic.sfz
+sfz/Synths/MegaBrass.sfz
+sfz/Synths/Wonders.sfz
+sfz/Synths/Rip Synth.sfz
+sfz/Synths/Brush Pads.sfz
+sfz/Synths/Mute Plug.sfz
+sfz/Synths/Seq & Pluck/
+sfz/Synths/SynOrch.sfz
+sfz/Synths/Synth Vox 1.sfz
+sfz/Synths/DigiString.sfz
+sfz/Synths/Celestial.sfz
+sfz/Synths/Huge Synth.sfz
+sfz/Synths/Axis Sweeps Long.sfz
+sfz/Synths/SpacePad.sfz
+sfz/Synths/Dyna Layers.sfz
+sfz/Synths/Saw Lead.sfz
+sfz/Synths/Ensemble Strings.sfz
+sfz/Synths/Swell Synth.sfz
+sfz/Synths/JX Saws.sfz
+sfz/Synths/Big Synth.sfz
+sfz/Synths/System.sfz
+sfz/Synths/Digiverb.sfz
+sfz/Synths/Pulse Bass.sfz
+sfz/Synths/Moog.sfz
+sfz/Synths/Poly S Keys.sfz
+sfz/Synths/MelloString.sfz
+sfz/Synths/Synthy Voces.sfz
+sfz/Synths/Swell Synth1.sfz
+sfz/Synths/Synth Brass1.sfz
+sfz/Synths/Piano Strings.sfz
+sfz/Synths/Detune.sfz
+sfz/Synths/Analog.sfz
+sfz/Synths/Solina.sfz
+sfz/Synths/Rich Stacks.sfz
+sfz/Synths/DigiBell.sfz
+sfz/Synths/Breathy Chiffs.sfz
+sfz/Synths/OooZzz.sfz
+sfz/Synths/Delicate.sfz
+sfz/Synths/FatString.sfz
+sfz/Synths/Axis Sweeps.sfz
+sfz/Synths/Bowinds.sfz
+sfz/Synths/Pan Choir.sfz
+sfz/Synths/Ultimate Synth.sfz
+sfz/Synths/Vibe Softs.sfz
+sfz/Synths/Moog Buzz.sfz
+sfz/Synths/TriPad.sfz
+sfz/Synths/Saw Rez.sfz
+sfz/Synths/Moog Punch.sfz
+sfz/Synths/Night Pads.sfz
+sfz/Synths/SynthHorn.sfz
+sfz/Synths/OrchBrass.sfz
+sfz/Synths/PhaserOrgan.sfz
+sfz/Synths/Bang.sfz
+sfz/Synths/TrillSynth.sfz
+sfz/Synths/Ambients & Drones/
+sfz/Synths/Elec Bass.sfz
+sfz/Synths/Eli Pads.sfz
+sfz/Synths/Hydromatics.sfz
+sfz/Synths/Organ.sfz
+sfz/Synths/Ethereal.sfz
+sfz/Synths/Synth Brass.sfz
+sfz/Synths/Vocal Padds.sfz
+sfz/Synths/Slap Synth.sfz
+sfz/Synths/HarpSis.sfz
+sfz/Synths/303 Punch.sfz
+sfz/Synths/Res.sfz
+sfz/Synths/SynStr.sfz
+sfz/Synths/OB 01.sfz
+sfz/Synths/Itoh Waves.sfz
+sfz/Synths/Pwn5ths.sfz
+sfz/Synths/Bright.sfz
+sfz/Synths/BowString.sfz
+sfz/Synths/Power.sfz
+sfz/Synths/Low.sfz
+sfz/Synths/Hard Rub.sfz
+sfz/Synths/Synth Pad 1.sfz
+sfz/Synths/Syn Stacks.sfz
+sfz/Synths/Synth Vox 2.sfz
+sfz/Synths/LaString.sfz
+sfz/Synths/Piano Strings L.sfz
+sfz/Synths/Dyna.sfz
+sfz/Vocals/Choir/
+sfz/Woodwinds/FluteSect/
+sfz/Woodwinds/BassoonSect/
+sfz/Woodwinds/SoloClarinet/
+sfz/Woodwinds/Oboe/
+sfz/Woodwinds/Recorder/
+sfz/Woodwinds/SoloFlute/
+sfz/Woodwinds/ClarinetSect/
+sfz/Woodwinds/SoloBassoon/

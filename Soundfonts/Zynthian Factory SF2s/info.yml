@@ -1,0 +1,9 @@
+
+title: "Zynthian Factory SF2s"
+icon: "Art/zynthian_logo_trans_big.png"
+author: "Various"
+license: "Various (GPL, MIT, CC0, CC-BY-SA)"
+source_url: ""
+size: "474MB"
+content: "sf2/*"
+description: "A collection of SF2 soundfonts from different sources, categorized by instrument type. This collection part of the 'factory' collection and it's required by some demo snapshots."
