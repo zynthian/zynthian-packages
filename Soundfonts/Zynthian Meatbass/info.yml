@@ -6,38 +6,35 @@ source_url: "https://github.com/jlearman/zynthian-meatbass"
 size: "15MB"
 content: "soundfonts/sfz/Bass (sfz)"
 description: "Karoryfer Meatbass for Zynthian
-
 This an upright bass plucked (pizzicato), intended to be suitable for
-jazz/blues/bluegrass/Americana on Zynthian.
-It is a reduced version of Karoryfer Meatbass, which is available free at
-<a href=https://shop.karoryfer.com/pages/free-samples>Karoryfer</a> .
+jazz/blues/bluegrass on Zynthian. It is a reduced version of Karoryfer
+Meatbass, which is freely available at <a href=https://shop.karoryfer.com/pages/free-samples>Karoryfer</a>.
 
 This version was reduced from the original by Jeff Learman.
 
 Notes above SPN C5 (an octave above Middle C) are common percussive
 noises made on the bass, such as slaps.
 
-<h2> Controls </h2>
+<b> Controls </b>
+<ul>
+<li> cc7 - Master Vol</li>
+<li> cc10 - Master Pan</li>
+<li> cc100 - Attack</li>
+<li> cc101 - Hold</li>
+<li> cc102 - Decay</li>
+<li> cc103 - Sustain</li>
+<li> cc104 - Release</li>
+<li> cc111 - Vibrato Depth</li>
+<li> cc112 - Vibrato Speed</li>
+<li> cc115 - Vibrato Delay</li>
+<li> cc116 - Vibrato Fadev
+<li> cc117 - Humanize Rate</li>
+<li> cc118 - Uneven Pitch</li>
+<li> cc119 - Unsteady Vibrato</li>
+</ul>
 
-<li> cc7 - Master Vol
-<li> cc10 - Master Pan
-<li> cc100 - Attack
-<li> cc101 - Hold
-<li> cc102 - Decay
-<li> cc103 - Sustain
-<li> cc104 - Release
-<li> cc111 - Vibrato Depth
-<li> cc112 - Vibrato Speed
-<li> cc115 - Vibrato Delay
-<li> cc116 - Vibrato Fade
-<li> cc117 - Humanize Rate
-<li> cc118 - Uneven Pitch
-<li> cc119 - Unsteady Vibrato
-
-<h2> From original README for Karoryfer Meatbass </h2>
-
+<b> From original README for Karoryfer Meatbass </b>
 Meatbass is a sample library for Plogue Sforzando version 1.845 or newer. It contains samples of a 1958 Otto Rubner double bass played and mapped by Drogomir Smolken, recorded by Ludwik Zamenhof.
-
 Fifths tuning (CGDA), Thomastik-Infeld Spirocore strings. F.G. Pfretzschner bow, Pops' rosin.
 
 Plucked notes with four velocity layers and four round robins, and percussive noises with round robins, above the notes"
