@@ -1,8 +1,10 @@
 # zynthian-packages
 This repository contains zynthian package info, art &amp; management scripts.
+
 You can browse the package catalog using [this tool](https://zynthian.github.io/zynthian-packages/).
 
 Contributors can add/update packages by sending Pull Request to this repository.
+
 No package data is stored in this repository. Package data must be stored externally.
 
 Packages are categorized in several categories:
