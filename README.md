@@ -1,22 +1,27 @@
 # zynthian-packages
-This repository contains zynthian package info, art &amp; management scripts.
+This repository contains the official zynthian package catalog, consisting in a directory tree containing package metadata (info), art (images) & management scripts.
 
 + You can browse the package catalog using [this tool](https://zynthian.github.io/zynthian-packages/).
-+ Contributors can add/update packages by sending Pull Request to this repository.
++ Contributors can add/update packages by sending **Pull Requests** to this repository.
 + No package data is stored in this repository. Package data must be stored externally.
++ A package catalog JSON file is automatically regenerated after committing/merging changes into the main branch. Please, don't modify this file *by hand*.
 
-Packages are categorized in categories. Current categories are these:
+## Package Categories
+Packages are categorized in folders. Current categories are:
 
 + Collections
 + IRs
 + Soundfonts
 
-Each package consists of a directory with the next structure:
+## Packages
+Each package consists of a subfolder named with the **package_name**. Packages subfolders **must** be inside a category folder.
+Inside the package subfolder, it **MUST** have the next structure:
 
-+ **package_name**
-  + **Art** => A folder with package images
-  + **info.yml** => A YAML file with the package metadata: title, size, author, license, image, etc.
-  + **package_name.sh** => A shell script that manage package operations. The file name **MUST** match the package name.
+   + **Art** => A folder with package images & icons.
+   + **info.yml** => A YAML file with the package metadata: title, size, author, license, image, etc. See details below.
+   + **package_name.sh** => A shell script that manage package operations. The file name **MUST** match the package name.
+
+## Package Metada YAML file: info.yml
 
 A typical info.yml file:
 
@@ -39,6 +44,8 @@ Some tips:
 + When this has sense, it's recommended to use the "content" field to specify the location where the package files will be installed in the zynthian device.
 + The package size should be the installed size, not the compressed file size.
 + In the description a blank line is used to split the short description from the extended description. You can use simple HTML markup.
+
+## Package management script
 
 The package management script **MUST** implement these 3 commands:
 
