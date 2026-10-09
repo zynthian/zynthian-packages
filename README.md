@@ -9,8 +9,8 @@ This repository contains the official zynthian package catalog, consisting in a 
 ## Package Categories
 Packages are categorized in folders. Current categories are:
 
-+ Collections
 + IRs
++ Samples
 + Soundfonts
 
 ## Packages
