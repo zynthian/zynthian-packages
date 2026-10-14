@@ -30,9 +30,12 @@ jobs:
               # Convert YAML to JSON, injecting the ID and category parameters automatically
               export PKG_ID="$pkg_id"
               export CATEGORY="$category"
-              yq eval '. + {"id": strenv(PKG_ID), "category": strenv(CATEGORY)}' -o=json "$file" | jq -c '.' >> temp_catalog.json
-
-              echo "," >> temp_catalog.json
+              yq eval '. + {"id": strenv(PKG_ID), "category": strenv(CATEGORY)}' -o=json "$file" | jq -c '.' > temp_row.json
+              if [ -f "temp_row.json" ]; then
+                echo "," >> temp_row.json
+                cat temp_row.json >> temp_catalog.json
+                rm -f temp_row.json
+              fi
           done
           
           # Clean up the trailing comma from the final element loop and wrap the array brackets
