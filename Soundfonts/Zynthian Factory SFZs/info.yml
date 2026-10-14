@@ -1,9 +1,8 @@
-
 title: "Zynthian Factory SFZs"
 icon: "Art/zynthian_logo_trans_big.png"
 author: "Various"
-license: "Various (GPL, MIT, CC0, CC-BY-SA)"
-source_url: ""
-size: "1.4GB"
+license: "Various (GPL, MIT, CC0, CC-BY-SA, and unknown)"
+source_url: "htts://github.com/zynthian/zynthian-factory-sfzs"
+size: "738MB"
 content: "sfz/*"
-description: "A collection of SFZ soundfonts from different sources, categorized by instrument type. This collection is part of the 'factory' collection and it's required by some demo snapshots."
+description: "A collection of SFZ instruments from different sources, categorized by instrument type. This collection is part of the 'factory collection' and it's required by some demo snapshots."

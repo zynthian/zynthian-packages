@@ -1,0 +1,9 @@
+
+title: "Zynthian Factory Legacy SFZs"
+icon: "Art/zynthian_logo_trans_big.png"
+author: "Various"
+license: "Various (GPL, MIT, CC0, CC-BY-SA)"
+source_url: ""
+size: "1.4GB"
+content: "sfz/*"
+description: "The legacy collection of zynthian SFZ instruments, categorized by instrument type. This collection has been superseded by a git-versioned one."
