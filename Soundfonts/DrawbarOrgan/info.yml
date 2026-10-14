@@ -5,87 +5,79 @@ license: "CC0"
 source_url: "https://github.com/jlearman/zynthian-b3-sfz.git"
 size: "100 KB"
 content: "soundfonts/sfz/Organs/DrawbarOrgan"
-description: "DrawbarOrgan - Simple SFZ-based Hammond B3 emulation
+description: >
+ DrawbarOrgan - Simple SFZ-based Hammond B3 emulation It includes three SFZ files.
+ - DrawbarOrgan.sfz - control drawbars with CCs.  Uses too many voices.
+ - keyswitch.sfz - select registration by keyswitch
+ - modwheel.sfz - select registration by Mod wheel
+ For best results, use with X42 Whirl rotary speaker sim.
 
-Three SFZ files:
+ <b>DrawbarOrgan.sfz</b>
+ Control drawbars by CC
 
-DrawbarOrgan.sfz - control drawbars with CCs.  NOTE: uses too many voices.
-keyswitch.sfz - select registration by keyswitch
-modwheel.sfz - select registration by Mod wheel
+ NOTE: Every drawbar that's not at zero uses a voice.  That's a lot!
+ To reduce voice usage, a drawbar voice is not played if that drawbar
+ is at zero.  What this means is, while you can change drawbars as
+ you play, moving a drawbar from up from zero has no effect until
+ new notes are played.
 
-For best results, use with X42 Whirl rotary speaker sim.
+ The general idea for this sfz is that you'll adjust drawbars and
+ save the preset, and in general won't be fiddling drawbars as you
+ play with this organ.  If you want to do stuff like that, use SetBFree.
 
-Details below.
+ <b>keyswitch.sfz</b>
+ Keyswitch Registrations
 
-<h3>DrawbarOrgan.sfz</h3>
+ - Blues
+ A0  - 8880-00-000<br>
+ A#0 - 8880-02-000<br>
+ B0  - 8888-00-000<br>
+ C1  - 8888-02-000<br>
 
-Control drawbars by CC
+ - Flutes
+ C#1 - 8080-00-000<br>
+ D1  - 8080-02-000<br>
+ D#1 - 8008-00-000<br>
+ E1  - 8008-02-000<br>
+ F1  - 8000-08-000<br>
 
-NOTE: Every drawbar that's not at zero uses a voice.  That's a lot!
-To reduce voice usage, a drawbar voice is not played if that drawbar
-is at zero.  What this means is, while you can change drawbars as
-you play, moving a drawbar from up from zero has no effect until
-new notes are played.
+ - Swing
+ F#1 - 8400-12-340<br>
+ G1  - 8640-01-234<br>
 
-The general idea for this sfz is that you'll adjust drawbars and
-save the preset, and in general won't be fiddling drawbars as you
-play with this organ.  If you want to do stuff like that, use SetBFree.
+ - Full
+ G#1 - 8888-88-888<br>
 
-<h3>keyswitch.sfz</h3>
+ <b>modwheel.sfz</b>
+ Mod Wheel -> Registration
 
-Keyswitch Registrations
+ - Blues
+   0 -   9  - 8880-00-000<br>
+  10 -  19  - 8880-02-000<br>
+  20 -  29  - 8888-00-000<br>
+  30 -  39  - 8888-02-000<br>
 
-<li> blues
-A0  - 8880-00-000<br>
-A#0 - 8880-02-000<br>
-B0  - 8888-00-000<br>
-C1  - 8888-02-000<br>
+ - Flutes
+  40 -  49  - 8080-00-000<br>
+  50 -  59  - 8080-02-000<br>
+  60 -  69  - 8008-00-000<br>
+  70 -  79  - 8008-02-000<br>
+  80 -  89  - 8000-08-000<br>
 
-<li> flutes
-C#1 - 8080-00-000<br>
-D1  - 8080-02-000<br>
-D#1 - 8008-00-000<br>
-E1  - 8008-02-000<br>
-F1  - 8000-08-000<br>
+ - Swing
+  90 -  99  - 8400-12-340<br>
+ 100 - 109  - 8640-01-234<br>
 
-<li> swing
-F#1 - 8400-12-340<br>
-G1  - 8640-01-234<br>
+ - Full
+ 110 - 127  - 8888-88-888<br>
 
-<li> full
-G#1 - 8888-88-888<br>
+ <b>Hopeful improvemens</b>
 
-<h3>modwheel.sfz</h3>
+ - keyclick, if I can find a good sample
+ - python program to create wave file and sfz for a user-specified set of registrations.
 
-Mod Wheel -> Registration
+ <b>Not likely to happen</b>
 
-<li> blues
-  0 -   9  - 8880-00-000<br>
- 10 -  19  - 8880-02-000<br>
- 20 -  29  - 8888-00-000<br>
- 30 -  39  - 8888-02-000<br>
-
-<li> flutes
- 40 -  49  - 8080-00-000<br>
- 50 -  59  - 8080-02-000<br>
- 60 -  69  - 8008-00-000<br>
- 70 -  79  - 8008-02-000<br>
- 80 -  89  - 8000-08-000<br>
-
-<li> swing
- 90 -  99  - 8400-12-340<br>
-100 - 109  - 8640-01-234<br>
-
-<li> full
-110 - 127  - 8888-88-888<br>
-
-<h3>Hopeful improvemens</h3>
-
-<li> keyclick, if I can find a good sample
-<li> python program to create wave file and sfz for a user-specified set of registrations.
-
-<h3>Not likely to happen
-
-<li> percussion, because sfz doesn't have the capability to do it properly (it'd trigger on every keystrike.)
-<li> scanner (vibrato/chorus) because looping the samples would be a nightmare
-<li> foldback (possible but tedious)
+ - percussion, because sfz doesn't have the capability to do it properly (it'd trigger on every keystrike.)
+ - scanner (vibrato/chorus) because looping the samples would be a nightmare
+ - foldback (possible but tedious)
