@@ -3,7 +3,7 @@
 REPO="zynthian-factory-sfzs"
 URL_BASE="https://github.com/zynthian/$REPO"
 DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts"
-FLIST="factory_sfz_list.txt"
+FLIST="factory_dir_list.txt"
 FLIST_PATH="$DST_DIR/sfz/$FLIST"
 
 do_install() {
