@@ -33,11 +33,23 @@ is_installed() {
     fi
 }
 
+git_repo() {
+    echo $DOWNLOAD_URL
+}
+
+git_version() {
+    git ls-remote "$DOWNLOAD_URL" HEAD | awk '{ print $1 }'
+}
+
 if [[ "$1" == "install" ]]; then
     do_install
 elif [[ "$1" == "uninstall" ]]; then
     do_uninstall
 elif [[ "$1" == "installed" ]]; then
     echo $(is_installed)
+elif [[ "$1" == "git_version" ]]; then
+    echo $(git_version)
+elif [[ "$1" == "git_repo" ]]; then
+    echo $(git_repo)
 fi
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO="zynthian-factory-sfzs"
-URL_BASE="https://github.com/zynthian/$REPO"
+DOWNLOAD_URL="https://github.com/zynthian/$REPO"
 DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts"
 FLIST="factory_dir_list.txt"
 FLIST_PATH="$DST_DIR/sfz/$FLIST"
@@ -13,7 +13,7 @@ do_install() {
     fi
     mkdir -p "$DST_DIR"
     cd "$DST_DIR"
-    git clone --depth 1 "$URL_BASE"
+    git clone --depth 1 "$DOWNLOAD_URL"
     merge_move "./$REPO/sfz" "./sfz"
     rm -rf "./$REPO"
     echo "installed"
@@ -105,10 +105,22 @@ is_installed_legacy() {
     fi
 }
 
+git_repo() {
+    echo $DOWNLOAD_URL
+}
+
+git_version() {
+    git ls-remote "$DOWNLOAD_URL" HEAD | awk '{ print $1 }'
+}
+
 if [[ "$1" == "install" ]]; then
     do_install
 elif [[ "$1" == "uninstall" ]]; then
     do_uninstall
 elif [[ "$1" == "installed" ]]; then
     echo $(is_installed)
+elif [[ "$1" == "git_version" ]]; then
+    echo $(git_version)
+elif [[ "$1" == "git_repo" ]]; then
+    echo $(git_repo)
 fi
