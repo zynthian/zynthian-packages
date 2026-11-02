@@ -45,33 +45,90 @@ Some tips:
 + The package size should be the installed size, not the compressed file size.
 + In the description a blank line is used to split the short description from the extended description. You can use simple HTML markup.
 
+## Versions & Update
+
+If the package is managed with git tools, update is managed automatically (see subsection below).
+If not, the update system will use the *version* field from the info.yml. The value of this field must be modified by the package maintainer when a new version is available.
+If the package is not git-managed and not *version* field is included in the *info.yml*, only **install** and **remove** actions will be available for the package.
+will be available for it.
+
 ## Package management script
 
-The package management script **MUST** implement these 3 commands:
+The package management script is a shell script with file name identical to the package name.
+
+It **MUST** implement these 3 commands:
 
 + install
 + uninstall
 + installed
 
-A typical package management script: 
+This is a typical package management script:
+
+```
+#!/bin/bash
+
+DESTINY_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Drum Machines"
+URL_DOWNLOAD_BASE="https://os.zynthian.org/packages/Soundfonts/Linnoleum SFZ"
+
+
+do_install() {
+    mkdir -p "$DESTINY_DIR"
+    wget -q -O- "$URL_DOWNLOAD_BASE/Linnoleum.tar.xz" | tar -xJ -C "$DESTINY_DIR"
+    echo "installed"
+}
+
+do_uninstall() {
+    if [[ $(is_installed) == "installed" ]]; then
+        rm -rf "$DESTINY_DIR/Linnoleum"
+        echo "uninstalled"
+    else
+        echo "not installed"
+    fi
+}
+
+is_installed() {
+    if [[ -d "$DESTINY_DIR/Linnoleum" ]]; then
+        echo "installed"
+    else
+        echo "not installed"
+    fi
+}
+
+if [[ "$1" == "install" ]]; then
+    do_install
+elif [[ "$1" == "uninstall" ]]; then
+    do_uninstall
+elif [[ "$1" == "installed" ]]; then
+    echo $(is_installed)
+fi
+```
+
+## Git-managed packages
+
+If the package is installed using git tools, it's recommended to implement these 2 commands too:
+
++ git_version
++ git_repo
+
+These 2 commands are needed to allow the git-managed packages to be easily updated from the webconf GUI.
+
+This is a typical git-managed package management script:
 
 ```
 #!/bin/bash
 
 DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Pianos"
-RELEASE="2607"
-DOWNLOAD_URL="https://github.com/zynthian/jlearman.jRhodes3d/archive/refs/tags/$RELEASE.zip"
 DIRNAME="jRhodes3d"
+REPO="jlearman.jRhodes3d"
+DOWNLOAD_URL="https://github.com/zynthian/$REPO.git"
 
 do_install() {
     set -ex
     mkdir -p "$DST_DIR"
     cd "$DST_DIR"
-    wget -q "$DOWNLOAD_URL"
-    unzip -q "$RELEASE.zip"
-    rm -f "$RELEASE.zip"
-    mv "jlearman.$DIRNAME-$RELEASE" "$DIRNAME"
-    rm -rf "$DIRNAME/package"
+    git clone --depth 1 "$DOWNLOAD_URL"
+    rm -rf "$REPO/.git"
+    mv "$REPO" "$DIRNAME"
     mv "$DIRNAME/jRhodes3d-demo.mp3" "$ZYNTHIAN_MY_DATA_DIR/files/Audio/Tracks"
     set +x
     echo "installed"
@@ -95,11 +152,23 @@ is_installed() {
     fi
 }
 
+git_repo() {
+    echo $DOWNLOAD_URL
+}
+
+git_version() {
+    git ls-remote "$DOWNLOAD_URL" HEAD | awk '{ print $1 }'
+}
+
 if [[ "$1" == "install" ]]; then
     do_install
 elif [[ "$1" == "uninstall" ]]; then
     do_uninstall
 elif [[ "$1" == "installed" ]]; then
     echo $(is_installed)
+elif [[ "$1" == "git_version" ]]; then
+    echo $(git_version)
+elif [[ "$1" == "git_repo" ]]; then
+    echo $(git_repo)
 fi
 ```
