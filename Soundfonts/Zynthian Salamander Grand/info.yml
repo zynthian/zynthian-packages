@@ -11,4 +11,6 @@ The Accurate Salamander Project has remastered existing sample sets to produce n
 
 The Salamander Grand Piano (the widely used SFZ soundbank) with its high recording quality was used as the original source set, and all 480 sampled data in it were carefully re-mastered. We spend a great deal of time setting up and adjusting the processing system in order to achieve perfect quality (at the limit level of specifications). In addition to minimal filtering to preserve the original tone, spot noise that may have been caused by the recording was removed, vibratory noise from sources other than the hammers and strings was eliminated, and extensive restoration was performed to adjust the tone caused by the condition of the piano used for sampling (deteriorated hammers, lack of tuning, etc.) and to correct fatal problems. 
 
-This version was tailored for Zynthian by converting (normalized) samples to 16 bits and using FLAC lossless compression.  Hammer noise, release samples, and resonance samples are all retained. Half-pedaling is enabled, and release time is set to a curve simulating a grand piano."
+This version was tailored for Zynthian by converting (normalized) samples to 16 bits and using FLAC lossless compression.  Hammer noise, release samples, and resonance samples are all retained. Half-pedaling is enabled, and release time is set to a curve simulating a grand piano.
+
+This package is based on Accurate Salamander Grand V6.1a."
