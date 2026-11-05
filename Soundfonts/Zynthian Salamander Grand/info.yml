@@ -13,4 +13,4 @@ The Salamander Grand Piano (the widely used SFZ soundbank) with its high recordi
 
 This version was tailored for Zynthian by converting (normalized) samples to 16 bits and using FLAC lossless compression.  Hammer noise, release samples, and resonance samples are all retained. Half-pedaling is enabled, and release time is set to a curve simulating a grand piano.
 
-This package is based on Accurate Salamander Grand V6.1a."
+This package is based on Accurate Salamander Grand V6.2beta2"
