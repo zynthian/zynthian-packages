@@ -5,13 +5,12 @@ license: "CC0"
 source_url: "https://github.com/jlearman/zynthian-b3-sfz.git"
 size: "100 KB"
 content: "soundfonts/sfz/Organs/DrawbarOrgan"
-description: >
- DrawbarOrgan - Simple SFZ-based Hammond B3 emulation It includes three SFZ files.
-
+description: "DrawbarOrgan - Simple SFZ-based Hammond B3 emulation It includes three SFZ files.
+<br/>
  - DrawbarOrgan.sfz - control drawbars with CCs.  (Fun but uses too many voices)<br/>
  - keyswitch.sfz - select registration by keyswitch<br/>
  - modwheel.sfz - select registration by Mod wheel<br/>
-
+<br/>
  For best results, use with X42 Whirl rotary speaker sim.
 
  <b>DrawbarOrgan.sfz</b> -- Control drawbars by CC
@@ -78,3 +77,4 @@ description: >
  - percussion, because sfz doesn't have the capability to do it properly (it'd trigger on every keystrike.)<br/>
  - scanner (vibrato/chorus) because looping the samples would be a nightmare<br/>
  - foldback (possible but tedious)<br/>
+"
