@@ -16,7 +16,7 @@
         .card-img-container { height: 160px; background-color: #eaeaea; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .card-img-container img { width: 100%; height: 100%; object-fit: cover; }
         .badge-category { position: absolute; top: 10px; right: 10px; font-size: 0.75rem; z-index: 10; }
-        .description-text { display: -webkit-box; -webkit-box-orient: vertical; overflow: scroll; font-size: 0.8rem; color: #555; height: 6em; }
+        .description-text { display: -webkit-box; -webkit-box-orient: vertical; overflow: scroll; font-size: 0.8rem; color: #555; height: 8em; }
         .meta-spec { font-size: 0.8rem; font-weight: 600; color: #6c757d; }
         .bg-black {
             background-color: #0f1115 !important; /* Premium slate-black color matching synth panels */
@@ -189,7 +189,7 @@
                     <div class="card-img-container">
                         ${imageHTML}
                     </div>
-                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div class="card-body d-flex flex-column justify-content-between">
                         <div>
                             <h5 class="card-title fw-bold mb-1">${pkg.title || 'Untitled Package'}</h5>
                             <p class="text-muted small mb-3">By ${pkg.author || 'Unknown Author'}</p>
