@@ -5,25 +5,25 @@ license: "CC0"
 source_url: "https://github.com/jlearman/zynthian-b3-sfz.git"
 size: "100 KB"
 content: "soundfonts/sfz/Organs/DrawbarOrgan"
-description: "DrawbarOrgan - Simple SFZ-based Hammond B3 emulation It includes three SFZ files.
+description: "DrawbarOrgan - Simple SFZ-based Hammond B3 emulation It includes three SFZ files.<br/>
 <br>
 - DrawbarOrgan.sfz - control drawbars with CCs.  (Fun but uses too many voices)<br>
 - keyswitch.sfz - select registration by keyswitch<br>
 - modwheel.sfz - select registration by Mod wheel<br>
 <br>
-For best results, use with X42 Whirl rotary speaker sim.
+For best results, use with X42 Whirl rotary speaker sim.<br/>
 
-<b>DrawbarOrgan.sfz</b> -- Control drawbars by CC
+<b>DrawbarOrgan.sfz</b> -- Control drawbars by CC<br/>
 
- NOTE: Every drawbar that's not at zero uses a voice.  That's a lot!
- To reduce voice usage, a drawbar voice is not played if that drawbar
- is at zero.  What this means is, while you can change drawbars as
- you play, moving a drawbar from up from zero has no effect until
- new notes are played.
+NOTE: Every drawbar that's not at zero uses a voice.  That's a lot!
+To reduce voice usage, a drawbar voice is not played if that drawbar
+is at zero.  What this means is, while you can change drawbars as
+you play, moving a drawbar from up from zero has no effect until
+new notes are played.
 
- The general idea for this sfz is that you'll adjust drawbars and
- save the preset, and in general won't be fiddling drawbars as you
- play with this organ.  If you want to do stuff like that, use SetBFree.
+The general idea for this sfz is that you'll adjust drawbars and
+save the preset, and in general won't be fiddling drawbars as you
+play with this organ.  If you want to do stuff like that, use SetBFree.
 
 <b>keyswitch.sfz</b> -- Keyswitch Registrations
 
