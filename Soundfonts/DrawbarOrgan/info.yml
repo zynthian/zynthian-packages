@@ -7,9 +7,74 @@ size: "100 KB"
 content: "soundfonts/sfz/Organs/DrawbarOrgan"
 description: "DrawbarOrgan - Simple SFZ-based Hammond B3 emulation It includes three SFZ files.
 <br>
- - DrawbarOrgan.sfz - control drawbars with CCs.  (Fun but uses too many voices)<br/>
- - keyswitch.sfz - select registration by keyswitch<br/>
- - modwheel.sfz - select registration by Mod wheel<br/>
+- DrawbarOrgan.sfz - control drawbars with CCs.  (Fun but uses too many voices)<br>
+- keyswitch.sfz - select registration by keyswitch<br>
+- modwheel.sfz - select registration by Mod wheel<br>
 <br>
- For best results, use with X42 Whirl rotary speaker sim.
+For best results, use with X42 Whirl rotary speaker sim.
+
+<b>DrawbarOrgan.sfz</b> -- Control drawbars by CC
+
+ NOTE: Every drawbar that's not at zero uses a voice.  That's a lot!
+ To reduce voice usage, a drawbar voice is not played if that drawbar
+ is at zero.  What this means is, while you can change drawbars as
+ you play, moving a drawbar from up from zero has no effect until
+ new notes are played.
+
+ The general idea for this sfz is that you'll adjust drawbars and
+ save the preset, and in general won't be fiddling drawbars as you
+ play with this organ.  If you want to do stuff like that, use SetBFree.
+
+ <b>keyswitch.sfz</b> -- Keyswitch Registrations
+
+ <pre>
+ * Blues<br/>
+ &nbsp A0  - 8880-00-000<br/>
+ &nbsp A#0 - 8880-02-000<br/>
+ &nbsp B0  - 8888-00-000<br/>
+ &nbsp C1  - 8888-02-000<br/>
+ * Flutes<br/>
+ &nbsp C#1 - 8080-00-000<br/>
+ &nbsp D1  - 8080-02-000<br/>
+ &nbsp D#1 - 8008-00-000<br/>
+ &nbsp E1  - 8008-02-000<br/>
+ &nbsp F1  - 8000-08-000<br/>
+ * Swing<br/>
+ &nbsp F#1 - 8400-12-340<br/>
+ &nbsp G1  - 8640-01-234<br/>
+ * Full<br/>
+ &nbsp G#1 - 8888-88-888<br/>
+ </pre>
+
+ <b>modwheel.sfz</b> -- Mod Wheel -&gt; Registration
+
+ <pre>
+ * Blues<br/>
+ &nbsp  0 -   9  - 8880-00-000<br/>
+ &nbsp 10 -  19  - 8880-02-000<br/>
+ &nbsp 20 -  29  - 8888-00-000<br/>
+ &nbsp 30 -  39  - 8888-02-000<br/>
+ * Flutes<br/>
+ &nbsp 40 -  49  - 8080-00-000<br/>
+ &nbsp 50 -  59  - 8080-02-000<br/>
+ &nbsp 60 -  69  - 8008-00-000<br/>
+ &nbsp 70 -  79  - 8008-02-000<br/>
+ &nbsp 80 -  89  - 8000-08-000<br/>
+ * Swing<br/>
+ &nbsp 90 -  99  - 8400-12-340<br/>
+ &nbsp100 - 109  - 8640-01-234<br/>
+ * Full<br/>
+ &nbsp110 - 127  - 8888-88-888<br/>
+ </pre>
+
+ <b>Hopeful improvemens</b>
+
+ - keyclick, if I can find a good sample<br/>
+ - python program to create wave file and sfz for a user-specified set of registrations.<br/>
+
+ <b>Not likely to happen</b>
+
+ - percussion, because sfz doesn't have the capability to do it properly (it'd trigger on every keystrike.)<br/>
+ - scanner (vibrato/chorus) because looping the samples would be a nightmare<br/>
+ - foldback (possible but tedious)<br/>
 "
