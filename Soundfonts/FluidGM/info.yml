@@ -1,0 +1,14 @@
+title: "FluidSynth SF2 Update"
+icon: "Art/FluidSynthWebHeader.png"
+author: "Frank Wen, Jeff Learman"
+license: "MIT"
+source_url: "https://github.com/jlearman/fluid-soundfont"
+size: "448MB"
+content: "zynthian-plugins/lv2 (sf2)"
+description: "Update of FluidSynth sf2 to reduce latency in various instruments.
+
+The original FluidSynth SF2 (v3.1) was created by Frank Wen and distributed under the
+MIT license.  Latency was reduced by Jeff Learman in this version, V3.2.
+
+While the package is 438MB, it replaces a 438MB file on Zynthian, so there
+is no net change in disk space."
