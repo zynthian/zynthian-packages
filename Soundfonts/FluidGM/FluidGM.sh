@@ -26,7 +26,7 @@ do_install() {
     mkdir -p "$DST_DIR"
     cd "$DST_DIR"
     wget -q "$DOWNLOAD_URL"
-    mv "$ARRTIFACT" "$ZYN_FNAME"
+    mv "$ARTIFACT" "$ZYN_FNAME"
     set +x
     echo "installed"
 }
