@@ -17,7 +17,7 @@ RELEASE="v3.2"
 ARTIFACT="FluidR3_GM.sf2"
 CHKSUM="1842102224"
 ZYN_FNAME="FluidPlug.sf2"
-DOWNLOAD_URL="https://github.com/jlearman/$REPO/archive/refs/tags/$RELEASE/$ARTIFACT"
+DOWNLOAD_URL="https://github.com/jlearman/$REPO/releases/download/$RELEASE/$ARTIFACT"
 REPO_URL="https://github.com/jlearman/$REPO.git"
 
 do_install() {
