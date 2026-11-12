@@ -42,7 +42,7 @@ do_uninstall() {
 
 is_installed() {
     # nonstandard: check the checksum against the new version
-    if [[ $(cksum "$ZYN_FNAME" | cut -d' ' -f1 ) == "$CHECKSUM" ]] ; then
+    if [[ $(cksum "$DST_DIR/ZYN_FNAME" | cut -d' ' -f1 ) == "$CHECKSUM" ]] ; then
         echo "installed"
     else
         echo "not installed"
