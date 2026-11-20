@@ -1,19 +1,21 @@
 #!/bin/bash
 
+
+
+REPO="zynthian-b3-sfz"
+DOWNLOAD_URL="https://github.com/jlearman/$REPO.git"
+
 DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Drum Machines"
-RELEASE="2607"
-DOWNLOAD_URL="https://github.com/zynthian/TR808-fischer/archive/refs/tags/$RELEASE.zip"
 DIRNAME="TR808-fischer"
+DOWNLOAD_URL="https://github.com/zynthian/TR808-fischer.git"
 
 do_install() {
     set -ex
     mkdir -p "$DST_DIR"
-    cd "$DST_DIR"
-    wget -q "$DOWNLOAD_URL"
-    unzip -q "$RELEASE.zip"
-    rm -f "$RELEASE.zip"
-    mv "$DIRNAME-$RELEASE" "$DIRNAME"
-    rm -rf "$DIRNAME/package"
+    cd $DST_DIR
+    git clone --depth 1 "$DOWNLOAD_URL"
+    rm -rf "$REPO/.git"
+    mv "$REPO" "$DIRNAME"
     set +x
     echo "installed"
 }
@@ -35,11 +37,24 @@ is_installed() {
     fi
 }
 
+git_repo() {
+    echo $DOWNLOAD_URL
+}
+
+git_version() {
+    git ls-remote "$DOWNLOAD_URL" HEAD | awk '{ print $1 }'
+}
+
+
 if [[ "$1" == "install" ]]; then
     do_install
 elif [[ "$1" == "uninstall" ]]; then
     do_uninstall
 elif [[ "$1" == "installed" ]]; then
     echo $(is_installed)
+elif [[ "$1" == "git_version" ]]; then
+    echo $(git_version)
+elif [[ "$1" == "git_repo" ]]; then
+    echo $(git_repo)
 fi
 
