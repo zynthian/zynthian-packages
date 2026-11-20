@@ -12,7 +12,7 @@ DOWNLOAD_URL="https://github.com/zynthian/TR808-fischer.git"
 do_install() {
     set -ex
     mkdir -p "$DST_DIR"
-    cd $DST_DIR
+    cd "$DST_DIR"
     git clone --depth 1 "$DOWNLOAD_URL"
     rm -rf "$REPO/.git"
     mv "$REPO" "$DIRNAME"
