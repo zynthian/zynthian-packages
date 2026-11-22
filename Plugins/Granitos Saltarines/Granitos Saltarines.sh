@@ -1,10 +1,16 @@
 #!/bin/bash
 
 REPO="granitos_saltarines"
-VERSION="v.0.1.0"
+VERSION="v0.1.0"
+
+if [ "${MACHINE_HW_NAME}" == "aarch64" ]; then
+    CPU_ARCH="arm64"
+elif [ "${MACHINE_HW_NAME}" == "x86_64" ]; then
+    CPU_ARCH="x86_64"
+fi
 
 DIRNAME="$REPO.lv2"
-FILENAME="$REPO-lv2-${MACHINE_HW_NAME}.tar.gz"
+FILENAME="$REPO-lv2-$CPU_ARCH.tar.gz"
 REPO_URL="https://github.com/jofemodo/$REPO.git"
 DOWNLOAD_URL="https://github.com/jofemodo/$REPO/releases/download/$VERSION/$FILENAME"
 
