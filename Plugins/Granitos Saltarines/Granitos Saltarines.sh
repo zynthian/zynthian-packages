@@ -6,6 +6,7 @@
 
 REPO="granitos_saltarines"
 GITHUB="jofemodo/granitos_saltarines"
+PLUGIN_URI="https://zynthian.org/plugins/granitos_saltarines"
 
 DIRNAME="$REPO.lv2"
 REPO_URL="https://github.com/$GITHUB.git"
@@ -29,6 +30,7 @@ do_install() {
     tar xzf "$FILENAME"
     rm -f "$FILENAME"
     set +x
+    "${ZYNTHIAN_SYS_DIR:-/zynthian/zynthian-sys}/sbin/zynengine_tool.py" ENABLE "$PLUGIN_URI"
     echo "installed"
 }
 
