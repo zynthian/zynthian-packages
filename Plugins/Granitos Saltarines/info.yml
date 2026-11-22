@@ -1,9 +1,9 @@
 title: "Granitos Saltarines"
 icon: "Art/zui_control_widget_granitos_saltarines.png"
 author: "Jofemodo"
-license: "CC0"
+license: "GPL-3.0-or-later"
 source_url: "https://github.com/jofemodo/granitos_saltarines.git"
-size: "120 KB"
+size: "284 KB"
 content: "zynthian-plugins/lv2/granitos_saltarines.lv2"
 description: "A granular delay whose grains hop around the buffer like bouncing balls.<br/>
 
