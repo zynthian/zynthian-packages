@@ -10,9 +10,9 @@ PLUGIN_URI="https://zynthian.org/plugins/granitos_saltarines"
 
 DIRNAME="$REPO.lv2"
 REPO_URL="https://github.com/$GITHUB.git"
-DST_DIR="${ZYNTHIAN_PLUGINS_DIR:-/zynthian/zynthian-plugins}/lv2"
+DST_DIR="$ZYNTHIAN_PLUGINS_DIR/lv2"
 
-case "${MACHINE_HW_NAME:-$(uname -m)}" in
+case "$MACHINE_HW_NAME" in
     aarch64) CPU_ARCH="arm64" ;;
     x86_64) CPU_ARCH="x86_64" ;;
     *) CPU_ARCH="" ;;
@@ -22,7 +22,7 @@ DOWNLOAD_URL="https://github.com/$GITHUB/releases/latest/download/$FILENAME"
 
 do_install() {
     set -ex
-    [ -n "$CPU_ARCH" ] || { echo "unsupported architecture: $(uname -m)"; exit 1; }
+    [ -n "$CPU_ARCH" ] || { echo "unsupported architecture: $MACHINE_HW_NAME"; exit 1; }
     mkdir -p "$DST_DIR"
     cd "$DST_DIR"
     wget -q -O "$FILENAME" "$DOWNLOAD_URL"
@@ -30,7 +30,7 @@ do_install() {
     tar xzf "$FILENAME"
     rm -f "$FILENAME"
     set +x
-    "${ZYNTHIAN_SYS_DIR:-/zynthian/zynthian-sys}/sbin/zynengine_tool.py" ENABLE "$PLUGIN_URI"
+    $ZYNTHIAN_SYS_DIR/sbin/zynengine_tool.py ENABLE "$PLUGIN_URI"
     echo "installed"
 }
 
