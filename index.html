@@ -91,11 +91,9 @@
     <!-- Filters and Search Toolbar Controls -->
     <div class="row g-3 mb-4 justify-content-between align-items-center">
         <div class="col-md-6">
-            <div class="btn-group" role="group" id="categoryFilters">
+            <!-- Category buttons are generated from the categories found in packages.json -->
+            <div class="btn-group flex-wrap" role="group" id="categoryFilters">
                 <button type="button" class="btn btn-outline-dark active" data-filter="all">All Packages</button>
-                <button type="button" class="btn btn-outline-dark" data-filter="Soundfonts">Soundfonts</button>
-                <button type="button" class="btn btn-outline-dark" data-filter="IRs">IRs</button>
-                <button type="button" class="btn btn-outline-dark" data-filter="Samples">Samples</button>
             </div>
         </div>
         <div class="col-md-4">
@@ -129,7 +127,8 @@
             
             // Native JSON parsing—no external parsing library required
             allPackages = await response.json();
-            
+
+            renderCategoryFilters();
             renderGrid();
             setupEventListeners();
         } catch (error) {
@@ -139,6 +138,21 @@
                     <strong>Error:</strong> Unable to process package configurations. Please check if your GitHub Action has compiled packages.json successfully.
                 </div>`;
         }
+    }
+
+    function renderCategoryFilters() {
+        // One button per category present in the catalog, so new categories show up automatically
+        const container = document.getElementById('categoryFilters');
+        const categories = [...new Set(allPackages.map(pkg => pkg.category).filter(Boolean))]
+            .sort((a, b) => a.localeCompare(b));
+        categories.forEach(category => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'btn btn-outline-dark';
+            btn.dataset.filter = category;
+            btn.textContent = category;
+            container.appendChild(btn);
+        });
     }
 
     function renderGrid() {
@@ -166,7 +180,8 @@
             // Safe, dynamic URL construction using array splitting to avoid syntax framework text-clipping issues
             let imgUrl = "";
             if (pkg.icon && pkg.category && pkg.id) {
-                imgUrl = [pkg.category, pkg.id, pkg.icon].join('/');
+                // Encode each path segment: package folders may contain spaces (e.g. "Granitos Saltarines")
+                imgUrl = [pkg.category, pkg.id, ...pkg.icon.split('/')].map(encodeURIComponent).join('/');
             }
             
             const col = document.createElement('div');

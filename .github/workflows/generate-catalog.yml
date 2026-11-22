@@ -20,7 +20,8 @@ jobs:
           
           # Find all info.yml metadata files recursively across category directories
           # Convert YAML contents to single-line JSON items separated by commas
-          find . -name "info.yml" -type f | while read -r file; do
+          # Sorted, so the catalog order is stable between runs
+          find . -path ./.git -prune -o -name "info.yml" -type f -print | LC_ALL=C sort | while read -r file; do
               # Get the folder name to use as a unique package ID key
               pkg_id=$(basename "$(dirname "$file")")
               
