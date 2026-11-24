@@ -8,10 +8,10 @@ BUNDLE="kr106_gui-zyngui.lv2"
 DEST_ROOT="/zynthian/zynthian-plugins/lv2-widgets"
 STAMP="/zynthian/config/lv2.stamp"
 TARGET="$DEST_ROOT/$BUNDLE"
-RELEASE="ultramaster-kr106-ui-v0.5.1"
-ASSET="Ultramaster_KR106_UI_v0.5.1_Widget_Tomita.zip"
+RELEASE="ultramaster-kr106-ui-v0.5.2"
+ASSET="Ultramaster_KR106_UI_v0.5.2_Widget_Tomita.zip"
 DOWNLOAD_URL="https://github.com/Nicolaz71/zynthian-widgets/releases/download/$RELEASE/$ASSET"
-EXPECTED_SHA256="ab1180a525e8bc4844a714d8ad155d1fb9286f69b1de1659ab9a0f3c948583b3"
+EXPECTED_SHA256="11f8185f8e1b592d7a0a21f5deb3452a9e05d0daeccc2aacc66f395c5e9ca064"
 ORIGINAL_URI="https://kayrock.org/kr106"
 
 is_our_widget() {

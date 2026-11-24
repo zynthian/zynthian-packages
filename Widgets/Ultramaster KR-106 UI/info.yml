@@ -3,12 +3,13 @@ icon: "Art/kr106-ui-synth.png"
 author: "Nicolaz71"
 license: "GPL-3.0-or-later"
 source_url: "https://github.com/Nicolaz71/zynthian-widgets"
-version: "0.5.1"
+content: "zynthian-plugins/lv2-widgets/kr106_gui-zyngui.lv2"
+version: "0.5.2"
 size: "105KB"
 description: |
   Touchscreen UI widget for the original Ultramaster KR-106 LV2 synthesizer on Zynthian Tomita.
 
   Four pages (SYNTH, ENV, PLAY, SET), responsive header, touch controls,
-  hardware encoder navigation, and access to native controls / MIDI Learn.
+  direct arrow-key navigation without ALT, and access to native controls / MIDI Learn.
   Requires the original KR-106 LV2 plugin (https://kayrock.org/kr106).
   Installs only a Python/Tk widget in lv2-widgets; no DSP or synth binaries.
