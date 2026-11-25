@@ -1,0 +1,11 @@
+title: "zyntuner"
+icon: "Art/zui_control_widget_zyntuner.png"
+author: "riban"
+license: "GPL-3.0-or-later"
+source_url: "https://github.com/riban-bw/zyntuner.git"
+size: "292 KB"
+content: "zynthian-plugins/lv2/zyntuner.lv2"
+description: "Low CPU guitar tuner with stereo pass-through.<br/>
+
+Shows the note being played and how far it is from being in tune, in cents. A needle moves left when the note is flat and right when it is sharp, and turns green when in tune (within 3 cents). Audio passes through unchanged, so it can sit anywhere in a chain. Controls: A4 reference (415 to 466 Hz), input threshold and bypass. Detection covers 28 Hz to 1350 Hz, from a 5-string bass low B to the top of a guitar neck, and uses very little CPU.
+"
