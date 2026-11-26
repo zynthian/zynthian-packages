@@ -1,0 +1,11 @@
+title: "zyntuner"
+icon: "Art/zui_control_widget_zyntuner.png"
+author: "riban"
+license: "GPL-3.0-or-later"
+source_url: "https://github.com/riban-bw/zyntuner.git"
+size: "260 KB"
+content: "zynthian-plugins/lv2/zyntuner.lv2"
+description: "Low CPU tuner with soft mute and microtonal scales.<br/>
+
+Shows the note being played and how far it is from being in tune, in cents. A needle moves left when the note is flat and right when it is sharp, and turns green when in tune (within 3 cents). Like a tuner pedal, the output is muted (with a short fade) while the tuner is on, and the audio passes unchanged when it is bypassed. 18 scales and tunings: 12-TET, just intonation, Pythagorean, meantone, Werckmeister III, Kirnberger III, Vallotti, 19, 24, 31 and 53-TET, Indian 22 shruti, gamelan slendro and pelog, Thai 7-TET, harmonic series, Partch 43-tone and Bohlen-Pierce. Controls: A4 reference (415 to 466 Hz), input threshold, bypass and scale. Detection covers 28 Hz to 1350 Hz, from a 5-string bass low B to the top of a guitar neck, and uses very little CPU.
+"
