@@ -1,37 +1,12 @@
 #!/bin/bash
+# Package script of Salamander Drumkit: archive from os.zynthian.org, extracted in the soundfonts.
+# It uses the zynthian-packages library, so it needs the catalog at $ZYNTHIAN_DIR/zynthian-packages.
 
-DESTINY_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Drums"
-URL_DOWNLOAD="https://os.zynthian.org/packages/Soundfonts/Salamander Drumkit/Salamander Drumkit.tar.xz"
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
 
+PACKAGE_TYPE="archive"
+DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Drums"
+ARCHIVES=("https://os.zynthian.org/packages/Soundfonts/Salamander Drumkit/Salamander Drumkit.tar.xz")
+ITEMS=("Salamander Drumkit")
 
-do_install() {
-    mkdir -p "$DESTINY_DIR"
-    wget -q -O- "$URL_DOWNLOAD" | tar -xJ -C "$DESTINY_DIR"
-    echo "installed"
-}
-
-do_uninstall() {
-    if [[ $(is_installed) == "installed" ]]; then
-        rm -rf "$DESTINY_DIR/Salamander Drumkit"
-        echo "uninstalled"
-    else
-        echo "not installed"
-    fi
-}
-
-is_installed() {
-    if [[ -d "$DESTINY_DIR/Salamander Drumkit" ]]; then
-        echo "installed"
-    else
-        echo "not installed"
-    fi
-}
-
-if [[ "$1" == "install" ]]; then
-    do_install
-elif [[ "$1" == "uninstall" ]]; then
-    do_uninstall
-elif [[ "$1" == "installed" ]]; then
-    echo $(is_installed)
-fi
-
+zynpackage_main "$@"

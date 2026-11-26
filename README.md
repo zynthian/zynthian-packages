@@ -105,8 +105,8 @@ fi
 
 ## Library for GitHub-hosted packages: zynpackage_lib.sh
 
-Packages whose files are published in a GitHub repository (LV2 plugins built by their CI, zynthian widget bundles)
-can use the library at the root of this repository instead of implementing the commands themselves: the package
+Packages whose files are published in a GitHub repository (LV2 plugins built by their CI, zynthian widget bundles,
+instruments cloned from a repository such as the sfz ones) can use the library at the root of this repository instead of implementing the commands themselves: the package
 script only sets its variables and calls `zynpackage_main`. It implements install, uninstall, installed, git_version
 and git_repo, and the script can redefine any function after sourcing it. For a release (`VERSION` set) `git_version`
 is not implemented: put the version in the `version` field of `info.yml` and webconf offers updates from it. See the header of `zynpackage_lib.sh`.
@@ -114,7 +114,7 @@ is not implemented: put the version in the `version` field of `info.yml` and web
 ```
 source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
 
-PACKAGE_TYPE="lv2_plugin"      # lv2_plugin | lv2_widget
+PACKAGE_TYPE="lv2_plugin"      # lv2_plugin | lv2_widget | github_clone
 GITHUB="owner/my_plugin"
 VERSION="v0.1.0"               # release tag, or "" to install the latest build
 SYMBOL="my_plugin"
@@ -122,6 +122,28 @@ PLUGIN_URI="https://zynthian.org/plugins/my_plugin"
 
 zynpackage_main "$@"
 ```
+
+`github_clone` clones the repository (`GITHUB`, optionally a tag or branch in `VERSION`) and installs it, without `.git`,
+as `$DST_DIR/$DIRNAME` (variables `DST_DIR` and `DIRNAME`; `SUBDIR` installs only a directory of the repository,
+this is how `lv2_widget` installs the widget bundle of its repository); for example, the sfz instruments:
+
+```
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
+
+PACKAGE_TYPE="github_clone"
+GITHUB="jlearman/stevie-clavinet"
+DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Pianos"
+DIRNAME="Stevie Clavinet"
+
+zynpackage_main "$@"
+```
+
+`archive` downloads archives (`.tar.xz`, `.tar.gz`, `.zip`; the URLs in `ARCHIVES`) and extracts them into `DST_DIR`
+(optionally in its `EXTRACT_SUBDIR`). Uninstall removes the `ITEMS` (paths relative to `DST_DIR`, or the lines of
+`ITEMS_FILE`, a file next to the script, with `ITEMS_PREFIX`); `INSTALLED_ITEM` is an item whose presence means
+"installed" (default: any item). The script can define the functions `pre_install`, `post_install` (e.g. to rename
+what the archive extracts) and `post_uninstall`; `github_clone` accepts the same hooks. Archives from a GitHub release tag set `GITHUB` and `VERSION` (the
+tag) in the script and `version` in `info.yml`; `git_version` and `git_repo` are only implemented with `GITHUB`.
 
 A script that uses the library needs this catalog on the machine: run it on a zynthian, or with `ZYNTHIAN_DIR`
 pointing to a folder that has a clone of this repository in `zynthian-packages`. `bash zynpackage_lib_test.sh` runs

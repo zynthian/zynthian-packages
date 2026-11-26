@@ -1,51 +1,23 @@
 #!/bin/bash
+# Package script of Zynthian Factory Legacy SFZs: archive from os.zynthian.org, extracted in the soundfonts.
+# It uses the zynthian-packages library, so it needs the catalog at $ZYNTHIAN_DIR/zynthian-packages.
 
-DESTINY_DIR="$ZYNTHIAN_DATA_DIR/soundfonts"
-URL_BASE="https://os.zynthian.org/packages/Soundfonts/Zynthian Factory SFZs"
-URL_DOWNLOAD="$URL_BASE/sfz.tar.xz"
-URL_DIRLIST="$URL_BASE/dir_list.txt"
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
+
+PACKAGE_TYPE="archive"
+DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts"
+ARCHIVES=("https://os.zynthian.org/packages/Soundfonts/Zynthian Factory SFZs/sfz.tar.xz")
+ITEMS_FILE="dir_list.txt"
+INSTALLED_ITEM="sfz/Guitars/RealBanjo"
 
 # To extract dir_list.txt =>
 # tar -t --no-recursion -f sfz.tar.xz sfz/*/* > dir_list.txt
 
-
-do_install() {
-    if [[ -f "$DESTINY_DIR/factory_sfz_list.txt" ]] ; then
+pre_install() {
+    if [[ -f "$DST_DIR/factory_sfz_list.txt" ]]; then
         echo "Uninstall Zynthian Factory SFZs package first!"
         exit 1
     fi
-    mkdir -p "$DESTINY_DIR"
-    wget -q -O- "$URL_DOWNLOAD" | tar -xJ -C "$DESTINY_DIR"
-    echo "installed"
 }
 
-do_uninstall() {
-    if [[ $(is_installed) == "installed" ]]; then
-        #IFS=$'\n' dir_list=( $(wget -q -O- $URL_DIRLIST) )
-        SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-        readarray -t dir_list < "$SCRIPT_DIR/dir_list.txt"
-        for dir in "${dir_list[@]}"; do
-            rm -rf "$DESTINY_DIR/$dir"
-        done
-        echo "uninstalled"
-    else
-        echo "not installed"
-    fi
-}
-
-is_installed() {
-    if [[ -d "$DESTINY_DIR/sfz/Guitars/RealBanjo" ]]; then
-        echo "installed"
-    else
-        echo "not installed"
-    fi
-}
-
-
-if [[ "$1" == "install" ]]; then
-    do_install
-elif [[ "$1" == "uninstall" ]]; then
-    do_uninstall
-elif [[ "$1" == "installed" ]]; then
-    echo $(is_installed)
-fi
+zynpackage_main "$@"

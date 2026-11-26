@@ -1,39 +1,18 @@
 #!/bin/bash
+# Package script of VSCO2: VSCO 2 Community Edition, the zip of the GitHub release VERSION, extracted in the sfz soundfonts.
+# It uses the zynthian-packages library, so it needs the catalog at $ZYNTHIAN_DIR/zynthian-packages.
 
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
+
+PACKAGE_TYPE="archive"
+GITHUB="sgossner/VSCO-2-CE"
+VERSION="1.1.0"                 # release tag; "version" in info.yml
 DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz"
-DIRNAME="VSCO2"
-DOWNLOAD_URL="https://github.com/sgossner/VSCO-2-CE/archive/refs/tags/1.1.0.zip"
-ZIP_DIR="VSCO-2-CE-1.1.0" # directory name at top of zip file
+ARCHIVES=("https://github.com/$GITHUB/archive/refs/tags/$VERSION.zip")
+ITEMS=("VSCO2")
 
-do_install() {
-    mkdir -p "$DST_DIR"
-    wget -O - "$DOWNLOAD_URL" | bsdtar -xf - -C "$DST_DIR"
-    mv "$DST_DIR/$ZIP_DIR" "$DST_DIR/$DIRNAME"
-    echo "installed"
+post_install() {
+    mv "$DST_DIR/VSCO-2-CE-$VERSION" "$DST_DIR/VSCO2"   # VSCO-2-CE-<version>: directory at the top of the zip file
 }
 
-do_uninstall() {
-    if [[ $(is_installed) == "installed" ]]; then
-        rm -rf "$DST_DIR/$DIRNAME"
-        echo "uninstalled"
-    else
-        echo "not installed"
-    fi
-}
-
-is_installed() {
-    if [[ -d "$DST_DIR/$DIRNAME" ]]; then
-        echo "installed"
-    else
-        echo "not installed"
-    fi
-}
-
-if [[ "$1" == "install" ]]; then
-    do_install
-elif [[ "$1" == "uninstall" ]]; then
-    do_uninstall
-elif [[ "$1" == "installed" ]]; then
-    echo $(is_installed)
-fi
-
+zynpackage_main "$@"

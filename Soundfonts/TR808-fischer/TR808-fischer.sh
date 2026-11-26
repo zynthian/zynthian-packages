@@ -1,60 +1,12 @@
 #!/bin/bash
+# Package script of TR808-fischer: the GitHub repository zynthian/TR808-fischer, installed in the sfz soundfonts.
+# It uses the zynthian-packages library, so it needs the catalog at $ZYNTHIAN_DIR/zynthian-packages.
 
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
 
-
-REPO="zynthian-b3-sfz"
-DOWNLOAD_URL="https://github.com/jlearman/$REPO.git"
-
+PACKAGE_TYPE="github_clone"
+GITHUB="zynthian/TR808-fischer"
 DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz/Drum Machines"
 DIRNAME="TR808-fischer"
-DOWNLOAD_URL="https://github.com/zynthian/TR808-fischer.git"
 
-do_install() {
-    set -ex
-    mkdir -p "$DST_DIR"
-    cd "$DST_DIR"
-    git clone --depth 1 "$DOWNLOAD_URL"
-    rm -rf "$REPO/.git"
-    mv "$REPO" "$DIRNAME"
-    set +x
-    echo "installed"
-}
-
-do_uninstall() {
-    if [[ $(is_installed) == "installed" ]]; then
-        rm -rf "$DST_DIR/$DIRNAME"
-        echo "uninstalled"
-    else
-        echo "not installed"
-    fi
-}
-
-is_installed() {
-    if [[ -d "$DST_DIR/$DIRNAME" ]]; then
-        echo "installed"
-    else
-        echo "not installed"
-    fi
-}
-
-git_repo() {
-    echo $DOWNLOAD_URL
-}
-
-git_version() {
-    git ls-remote "$DOWNLOAD_URL" HEAD | awk '{ print $1 }'
-}
-
-
-if [[ "$1" == "install" ]]; then
-    do_install
-elif [[ "$1" == "uninstall" ]]; then
-    do_uninstall
-elif [[ "$1" == "installed" ]]; then
-    echo $(is_installed)
-elif [[ "$1" == "git_version" ]]; then
-    echo $(git_version)
-elif [[ "$1" == "git_repo" ]]; then
-    echo $(git_repo)
-fi
-
+zynpackage_main "$@"

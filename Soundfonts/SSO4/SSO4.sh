@@ -1,40 +1,22 @@
 #!/bin/bash
+# Package script of SSO4: Sonatina Symphonic Orchestra, the zip of the GitHub release VERSION, extracted in the sfz soundfonts.
+# It uses the zynthian-packages library, so it needs the catalog at $ZYNTHIAN_DIR/zynthian-packages.
 
-DESTINY_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz"
-URL_DOWNLOAD="https://github.com/peastman/sso/archive/refs/tags/v4.0.zip"
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
 
-do_install() {
-    mkdir -p "$DESTINY_DIR"
-    wget -q -O- "$URL_DOWNLOAD" | bsdtar -xvf- -C "$DESTINY_DIR"
-    mv "$DESTINY_DIR/sso-4.0/Sonatina Symphonic Orchestra" "$DESTINY_DIR/SSO4"
-    mv "$DESTINY_DIR/sso-4.0/LICENSE" "$DESTINY_DIR/SSO4"
-    mv "$DESTINY_DIR/sso-4.0/README.md" "$DESTINY_DIR/SSO4"
-    rm -rf "$DESTINY_DIR/sso-4.0"
-    echo "installed"
+PACKAGE_TYPE="archive"
+GITHUB="peastman/sso"
+VERSION="v4.0"                  # release tag; "version" in info.yml
+DST_DIR="$ZYNTHIAN_DATA_DIR/soundfonts/sfz"
+ARCHIVES=("https://github.com/$GITHUB/archive/refs/tags/$VERSION.zip")
+ITEMS=("SSO4")
+
+post_install() {
+    local zip_dir="sso-${VERSION#v}"   # directory at the top of the zip file
+    mv "$DST_DIR/$zip_dir/Sonatina Symphonic Orchestra" "$DST_DIR/SSO4"
+    mv "$DST_DIR/$zip_dir/LICENSE" "$DST_DIR/SSO4"
+    mv "$DST_DIR/$zip_dir/README.md" "$DST_DIR/SSO4"
+    rm -rf "$DST_DIR/$zip_dir"
 }
 
-do_uninstall() {
-    if [[ $(is_installed) == "installed" ]]; then
-        rm -rf "$DESTINY_DIR/SSO4"
-        echo "uninstalled"
-    else
-        echo "not installed"
-    fi
-}
-
-is_installed() {
-    if [[ -d "$DESTINY_DIR/SSO4" ]]; then
-        echo "installed"
-    else
-        echo "not installed"
-    fi
-}
-
-if [[ "$1" == "install" ]]; then
-    do_install
-elif [[ "$1" == "uninstall" ]]; then
-    do_uninstall
-elif [[ "$1" == "installed" ]]; then
-    echo $(is_installed)
-fi
-
+zynpackage_main "$@"
