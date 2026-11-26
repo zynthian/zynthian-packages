@@ -103,6 +103,29 @@ elif [[ "$1" == "installed" ]]; then
 fi
 ```
 
+## Library for GitHub-hosted packages: zynpackage_lib.sh
+
+Packages whose files are published in a GitHub repository (LV2 plugins built by their CI, zynthian widget bundles)
+can use the library at the root of this repository instead of implementing the commands themselves: the package
+script only sets its variables and calls `zynpackage_main`. It implements install, uninstall, installed, git_version
+and git_repo, and the script can redefine any function after sourcing it. See the header of `zynpackage_lib.sh`.
+
+```
+source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh
+
+PACKAGE_TYPE="lv2_plugin"      # lv2_plugin | lv2_widget
+GITHUB="owner/my_plugin"
+VERSION="v0.1.0"               # release tag, or "" to install the latest build
+SYMBOL="my_plugin"
+PLUGIN_URI="https://zynthian.org/plugins/my_plugin"
+
+zynpackage_main "$@"
+```
+
+A script that uses the library needs this catalog on the machine: run it on a zynthian, or with `ZYNTHIAN_DIR`
+pointing to a folder that has a clone of this repository in `zynthian-packages`. `bash zynpackage_lib_test.sh` runs
+the library's self-test (no network needed).
+
 ## Git-managed packages
 
 If the package is installed using git tools, it's recommended to implement these 2 commands too:
