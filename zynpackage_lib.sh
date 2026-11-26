@@ -45,8 +45,10 @@ git_repo() {
     echo "https://github.com/$GITHUB.git"
 }
 
-# Last commit of the default branch: webconf uses it to offer updates when the package has no "version" in info.yml
+# Last commit of the default branch: webconf uses it to offer updates when the package has no "version" in info.yml.
+# Not implemented (no output) for a release (VERSION set): webconf then uses the "version" of info.yml.
 git_version() {
+    [ -z "$VERSION" ] || return 0
     git ls-remote "$(git_repo)" HEAD | awk '{ print $1 }'
 }
 

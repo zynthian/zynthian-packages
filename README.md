@@ -108,7 +108,8 @@ fi
 Packages whose files are published in a GitHub repository (LV2 plugins built by their CI, zynthian widget bundles)
 can use the library at the root of this repository instead of implementing the commands themselves: the package
 script only sets its variables and calls `zynpackage_main`. It implements install, uninstall, installed, git_version
-and git_repo, and the script can redefine any function after sourcing it. See the header of `zynpackage_lib.sh`.
+and git_repo, and the script can redefine any function after sourcing it. For a release (`VERSION` set) `git_version`
+is not implemented: put the version in the `version` field of `info.yml` and webconf offers updates from it. See the header of `zynpackage_lib.sh`.
 
 ```
 source $ZYNTHIAN_DIR/zynthian-packages/zynpackage_lib.sh

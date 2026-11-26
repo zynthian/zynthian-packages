@@ -25,6 +25,9 @@ case "\$url" in */archive/*) f="$T/archive.tar.gz" ;; *.tar.gz) f="$T/plugin.tar
 if [ "\$dest" = "-" ]; then cat "\$f"; else cp "\$f" "\$dest"; fi
 STUB
 chmod +x "$T/bin/wget" "$T/sys/sbin/zyngine_tool.py"
+# git stub: ls-remote answers with a commit
+printf '#!/bin/bash\necho -e "abc123\\tHEAD"\n' > "$T/bin/git"
+chmod +x "$T/bin/git"
 export PATH="$T/bin:$PATH"
 
 fails=0
@@ -43,6 +46,8 @@ pkg() {  # pkg <type> <version> <command>
 }
 
 check "git_repo" "https://github.com/owner/repo.git" "$(pkg lv2_plugin "" git_repo)"
+check "git_version: last commit without a release" "abc123" "$(pkg lv2_plugin "" git_version)"
+check "git_version: not implemented with a release" "" "$(pkg lv2_plugin v0.1.0 git_version)"
 (source "$HERE/zynpackage_lib.sh"; GITHUB=owner/repo
  VERSION=v1.2.3; check "release url (tag)" "https://github.com/owner/repo/releases/download/v1.2.3/f.tar.gz" "$(github_release_url f.tar.gz)"
  VERSION=""; check "release url (latest build)" "https://github.com/owner/repo/releases/download/latest/f.tar.gz" "$(github_release_url f.tar.gz)"
